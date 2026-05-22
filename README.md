@@ -30,3 +30,10 @@ To generate Laplacian noise data, uncomment the following code:
   ## 1). IQ-based models(models/IQ):
     Model architectures for data symbol `N`=150, including PATD-1D, PATD-2D in `CNN_150.py`, and other tiny models like TCN, GRU, Transformer and LSTM
   ## 2). SCM-based models (models/SCM)
+# 4. Imperfect conditions:
+## 1) Laplace noise:
+  Referencing the context at 1. Generating data.
+  ## 2) impulsive noise:
+  Change `impulsive=True` at data loading function `FramePilotSymbolDataset` and `FramePilotSymbolDatasetFrameOffsetd10` and setting at `add_impulse_only_to_existing` in utils.py.
+  ## 3) Timing offset:
+  Change  `ofs` of `FramePilotSymbolDatasetFrameOffsetd10` in utils.py, which will generate a random timing offset `offset = random.randint(0, max_offset)`.
