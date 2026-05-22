@@ -27,3 +27,6 @@ To generate Laplacian noise data, uncomment the following code:
   # 2). Unifined training (train_frame_whole_IQ_SCM_train_test.py):
     SNR bins share a single set of parameters--Only delpoying one set of parameters on MCU.
 # 3. Model Architectures:
+  # 1). IQ-based models(model/IQ):
+    Model architectures for data symbol `N`=150, including PATD-1D, PATD-2D in `CNN_150.py`, and other tiny models like TCN, GRU, Transformer and LSTM
+  # 2). SCM-based models (model/SCM)
