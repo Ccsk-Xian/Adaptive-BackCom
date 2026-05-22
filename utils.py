@@ -353,8 +353,8 @@ class FramePilotSymbolDatasetFrameOffsetd10(Dataset):
             max_offset = int(ofs * N)  # 最大偏移样本数（不跨过一个符号太多）
             if max_offset > 0:
                 for i in range(num_frames):
-                    # offset = random.randint(0, max_offset)
-                    offset = max_offset
+                    offset = random.randint(0, max_offset)
+                    # offset = max_offset
                     self.frame_offsets[i] = offset  # ✅新增：记录偏移
                     # # 只偏移pilots
                     # pilot_r = self.frames_real[i, :pilot_len]
@@ -876,7 +876,7 @@ class FramePilotSymbolDatasetd10(Dataset):
         if impulsive:
             self.frames_real, self.frames_imag = add_impulse_only_to_existing(
             self.frames_real, self.frames_imag,
-            w_imp=0.1,     # 新增冲击噪声功率
+            w_imp=0.1,     
             p=0.005,
             seed=100,
             dist="gaussian"
