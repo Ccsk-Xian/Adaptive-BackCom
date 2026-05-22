@@ -38,5 +38,5 @@ To generate Laplacian noise data, uncomment the following code:
   ## 3) Timing offset:
   Change  `ofs` of `FramePilotSymbolDatasetFrameOffsetd10` in utils.py, which will generate a random timing offset `offset = random.randint(0, max_offset)`.
 # 5. Quantization and deployment:
-  Reference lite.py to make 8-bit quantization to tranmit model.pt (32 float on PC) to model.onnx (32 float for deployment) and model.tflite (8 bit for deployment).
+  Reference `lite.py` to make 8-bit quantization to tranmit model.pt (32 float on PC) to model.onnx (32 float for deployment) and model.tflite (8 bit for deployment).
   Utilizing STM32CubeMX or Keil MDK-ARM for compiling and uploading your models on MCUs. MCU deployment may involve various unexpected issues, and relevant online resources are still limited. If you encounter any deployment problems, please feel free to contact me at: ccsk1wsl@stu.xupt.edu.cn. I will try my best to help based on my deployment experience.
