@@ -1,11 +1,11 @@
 # 1. Generating data (data.generating.py):
-Change `FRAME_LEN` and `N` according to the practical BackCom system settings. 
+Please change `FRAME_LEN` and `N` according to the practical BackCom system settings. 
 
-Change `pilot_bits = np.array([1, 0] * (K // 2 + 1), dtype=int)[:32]` according to the practical pilot symbol order.
+Please change `pilot_bits = np.array([1, 0] * (K // 2 + 1), dtype=int)[:32]` according to the practical pilot symbol order.
 
-Change `SNR_dB = np.arange(-10, 25, 5)` according to the practical SNR range considered in real scenarios.
+Please change `SNR_dB = np.arange(-10, 25, 5)` according to the practical SNR range considered in real scenarios.
 
-Change `Delta_beta_dB` in `generate_channel_coefficients_backscatter()` according to the practical relative coefficient `ζ`.
+Please change `Delta_beta_dB` in `generate_channel_coefficients_backscatter()` according to the practical relative coefficient `ζ`.
 
 Note: The fluctuation of ζ is actually 5 dB instead of 20 dB in the submitted manuscript. This inconsistency will be corrected in the next revision.
 
@@ -32,11 +32,11 @@ To generate Laplacian noise data, uncomment the following code:
   ## 2). SCM-based models (models/SCM)
 # 4. Imperfect conditions:
 ## 1) Laplace noise:
-  Referencing the context at 1. Generating data.
+  Please refer to the context at 1. Generating data.
   ## 2) impulsive noise:
-  Change `impulsive=True` at data loading function `FramePilotSymbolDataset` and `FramePilotSymbolDatasetFrameOffsetd10` and setting at `add_impulse_only_to_existing` in utils.py.
+  Please change `impulsive=True` at data loading function `FramePilotSymbolDataset` and `FramePilotSymbolDatasetFrameOffsetd10` and setting at `add_impulse_only_to_existing` in utils.py.
   ## 3) Timing offset:
-  Change  `ofs` of `FramePilotSymbolDatasetFrameOffsetd10` in utils.py, which will generate a random timing offset `offset = random.randint(0, max_offset)`.
+  Please change  `ofs` of `FramePilotSymbolDatasetFrameOffsetd10` in utils.py, which will generate a random timing offset `offset = random.randint(0, max_offset)`.
 # 5. Quantization and deployment:
-  Reference `lite.py` to make 8-bit quantization to tranmit model.pt (32 float on PC) to model.onnx (32 float for deployment) and model.tflite (8 bit for deployment).
+  Please refer to `lite.py` to make 8-bit quantization to tranmit model.pt (32 float on PC) to model.onnx (32 float for deployment) and model.tflite (8 bit for deployment).
   Utilizing STM32CubeMX or Keil MDK-ARM for compiling and uploading your models on MCUs. MCU deployment may involve various unexpected issues, and relevant online resources are still limited. If you encounter any deployment problems, please feel free to contact me at: ccsk1wsl@stu.xupt.edu.cn. I will try my best to help based on my deployment experience.
