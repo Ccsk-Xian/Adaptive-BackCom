@@ -22,11 +22,11 @@ To generate Laplacian noise data, uncomment the following code:
   l = n_real + 1j * n_imag
 ```
 # 2. Two training paradigm:
-  # 1). Per-SNR-BIN (train_frame_test.py):
+  ## 1). Per-SNR-BIN (train_frame_test.py):
     Each SNR bin has a specific set of parameters--Delpoying multiple set of parameters on MCU.
-  # 2). Unifined training (train_frame_whole_IQ_SCM_train_test.py):
+  ## 2). Unifined training (train_frame_whole_IQ_SCM_train_test.py):
     SNR bins share a single set of parameters--Only delpoying one set of parameters on MCU.
 # 3. Model Architectures:
-  # 1). IQ-based models(model/IQ):
+  ## 1). IQ-based models(models/IQ):
     Model architectures for data symbol `N`=150, including PATD-1D, PATD-2D in `CNN_150.py`, and other tiny models like TCN, GRU, Transformer and LSTM
-  # 2). SCM-based models (model/SCM)
+  ## 2). SCM-based models (models/SCM)
