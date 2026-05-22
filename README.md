@@ -21,3 +21,9 @@ To generate Laplacian noise data, uncomment the following code:
   # Complex Laplacian noise
   l = n_real + 1j * n_imag
 ```
+# 2. Two training paradigm:
+  # 1). Per-SNR-BIN (train_frame_test.py):
+    Each SNR bin has a specific set of parameters--Delpoying multiple set of parameters on MCU.
+  # 2). Unifined training (train_frame_whole_IQ_SCM_train_test.py):
+    SNR bins share a single set of parameters--Only delpoying one set of parameters on MCU.
+# 3. Model Architectures:
