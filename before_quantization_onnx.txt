@@ -1,0 +1,224 @@
+
+Building project 
+Generating project 
+Temporary project loaded 
+Temporary AI configuration done 
+Generating temporary project code 
+Building project 
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Users\40563\AppData\Local\Keil_v5\ARM\AC5\Bin' 
+Build target 'mxAI113274108711700' 
+assembling startup_stm32h7a3xxq.s... 
+compiling network_data.c... 
+compiling aiPbMemRWServices.c... 
+compiling pb_common.c... 
+compiling stm32msg.pb.c... 
+compiling network_data_params.c... 
+compiling pb_encode.c... 
+compiling lc_print.c... 
+compiling aiPbMgr.c... 
+compiling pb_decode.c... 
+compiling syscalls.c... 
+compiling network.c... 
+compiling stm32h7xx_hal_flash.c... 
+compiling stm32h7xx_hal_msp.c... 
+compiling stm32h7xx_hal_cortex.c... 
+compiling stm32h7xx_it.c... 
+compiling stm32h7xx_hal_flash_ex.c... 
+compiling aiPbIO.c... 
+compiling stm32h7xx_hal_gpio.c... 
+compiling aiTestUtility.c... 
+compiling app_x-cube-ai.c... 
+compiling main.c... 
+compiling aiTestHelper.c... 
+compiling ai_device_adaptor.c... 
+compiling stm32h7xx_hal_rcc.c... 
+compiling aiValidation.c... 
+compiling stm32h7xx_hal_rcc_ex.c... 
+compiling stm32h7xx_hal_hsem.c... 
+compiling system_stm32h7xx.c... 
+compiling stm32h7xx_hal_mdma.c... 
+compiling stm32h7xx_hal_dma_ex.c... 
+compiling stm32h7xx_hal_exti.c... 
+compiling stm32h7xx_hal_uart_ex.c... 
+compiling stm32h7xx_hal_i2c_ex.c... 
+compiling stm32h7xx_hal.c... 
+compiling stm32h7xx_hal_pwr.c... 
+compiling stm32h7xx_hal_pwr_ex.c... 
+compiling stm32h7xx_hal_uart.c... 
+compiling stm32h7xx_hal_i2c.c... 
+compiling stm32h7xx_hal_dma.c... 
+linking... 
+Program Size: Code=41828 RO-data=73120 RW-data=13260 ZI-data=354140   
+FromELF: creating hex file... 
+"mxAI113274108711700\mxAI113274108711700.axf" - 0 Error(s), 0 Warning(s). 
+Build Time Elapsed:  00:00:30 
+Flashing project 
+Build is Done 
+Starting AI validation on target with random data... 
+C:/Users/40563/STM32Cube/Repository/Packs/STMicroelectronics/X-CUBE-AI/10.2.0/Utilities/windows/stedgeai.exe validate --target stm32h7 --name network -m C:/Users/40563/Desktop/ztest1_output_const_all.onnx --compression none --verbosity 1 --workspace C:/Users/40563/AppData/Local/Temp/mxAI_workspace1133583221502001551277752530160016 --output C:/Users/40563/.stm32cubemx/network_output --mode target --desc serial:COM4:115200 
+ST Edge AI Core v2.2.0-20266 2adc00962 
+Setting validation data... 
+ generating random data, size=10, seed=42, range=(0, 1) 
+   I[1]: (10, 2, 33, 150)/float32, min/max=[0.000006, 0.999992], mean/std=[0.499461, 0.288377] 
+ no output/reference samples are provided 
+Creating c (debug) info json file C:\Users\40563\.stm32cubemx\network_output\network_c_info.json 
+  
+ Exec/report summary (validate) 
+ ------------------------------------------------------------------------------------------------------------ 
+ model file         :   C:\Users\40563\Desktop\ztest1_output_const_all.onnx                                   
+ type               :   onnx                                                                                  
+ c_name             :   network                                                                               
+ compression        :   none                                                                                  
+ options            :   allocate-inputs, allocate-outputs                                                     
+ optimization       :   balanced                                                                              
+ target/series      :   stm32h7                                                                               
+ workspace dir      :   C:\Users\40563\AppData\Local\Temp\mxAI_workspace1133583221502001551277752530160016    
+ output dir         :   C:\Users\40563\.stm32cubemx\network_output                                            
+ model_fmt          :   float                                                                                 
+ model_name         :   ztest1_output_const_all                                                               
+ model_hash         :   0x9afbc540791a21c2d770e77b532cd608                                                    
+ params #           :   17,220 items (67.27 KiB)                                                              
+ ------------------------------------------------------------------------------------------------------------ 
+ input 1/1          :   'input', f32(1x2x33x150), 38.67 KBytes, activations                                   
+ output 1/1         :   'output', f32(1x2), 8 Bytes, activations                                              
+ macc               :   10,338,792                                                                            
+ weights (ro)       :   68,900 B (67.29 KiB) (1 segment) / +20(+0.0%) vs float model                          
+ activations (rw)   :   340,616 B (332.63 KiB) (1 segment) *                                                  
+ ram (total)        :   340,616 B (332.63 KiB) = 340,616 + 0 + 0                                              
+ ------------------------------------------------------------------------------------------------------------ 
+ (*) 'input'/'output' buffers are allocated in the activations buffer 
+Running the ONNX model... 
+Running the ST.AI c-model (AI RUNNER)...(name=network, mode=TARGET) 
+ Proto-buffer driver v2.0 (msg v3.1) (Serial driver v1.0 - COM4:115200) ['network'] 
+  Summary 'network' - ['network'] 
+  ------------------------------------------------------------------------------------------------- 
+  I[1/1] 'input_1'    :   f32[1,2,33,150], 39600 Bytes, activations 
+  O[1/1] 'output_1'   :   f32[1,1,1,2], 8 Bytes, activations 
+  n_nodes             :   52 
+  activations         :   340616 
+  weights             :   68900 
+  macc                :   10338792 
+  hash                :   0x9afbc540791a21c2d770e77b532cd608 
+  compile_datetime    :   May 15 2026 21:03:31 
+  ------------------------------------------------------------------------------------------------- 
+  protocol            :   Proto-buffer driver v2.0 (msg v3.1) (Serial driver v1.0 - COM4:115200) 
+  tools               :   ST.AI (legacy api) v2.2.0 
+  runtime lib         :   v10.1.0-ae536891 compiled with MDK-ARM Keil 5060960 (AC5) 
+  capabilities        :   IO_ONLY, PER_LAYER, PER_LAYER_WITH_DATA 
+  device.desc         :   stm32 family - 0x0 - UNKNOW @280/280MHz 
+  device.attrs        :   fpu,art_lat=6,core_icache,core_dcache 
+  ------------------------------------------------------------------------------------------------- 
+STAI.IO:   0%|          | 0/10 [00:00<?, ?it/s] 
+STAI.IO:  30%|������       | 3/10 [00:09<00:23,  3.43s/it] 
+STAI.IO:  40%|��������      | 4/10 [00:14<00:23,  3.96s/it] 
+STAI.IO:  50%|����������     | 5/10 [00:19<00:21,  4.27s/it] 
+STAI.IO:  60%|������������    | 6/10 [00:24<00:17,  4.46s/it] 
+STAI.IO:  70%|��������������   | 7/10 [00:29<00:13,  4.59s/it] 
+STAI.IO:  80%|����������������  | 8/10 [00:33<00:09,  4.67s/it] 
+STAI.IO:  90%|������������������ | 9/10 [00:38<00:04,  4.72s/it] 
+  ST.AI Profiling results v2.0 - "network" 
+  ------------------------------------------------------------------ 
+  nb sample(s)   :   10 
+  duration       :   192.711 ms by sample (192.700/192.722/0.006) 
+  macc           :   10338792 
+  cycles/MACC    :   5.22 
+  CPU cycles     :   [53,959,023] 
+  ------------------------------------------------------------------ 
+   Inference time per node 
+   ---------------------------------------------------------------------------------------------- 
+   c_id    m_id   type                  dur (ms)       %    cumul  CPU cycles       name 
+   ---------------------------------------------------------------------------------------------- 
+   0       2      Transpose (0x10a)        2.929    1.5%     1.5%  [    820,126 ]   ai_node_0 
+   1       1      Conv2D (0x103)          39.159   20.3%    21.8%  [ 10,964,456 ]   ai_node_1 
+   2       2      NL (0x107)               1.337    0.7%    22.5%  [    374,332 ]   ai_node_2 
+   3       3      Conv2D (0x103)         143.886   74.7%    97.2%  [ 40,288,061 ]   ai_node_3 
+   4       4      NL (0x107)               0.671    0.3%    97.5%  [    187,749 ]   ai_node_4 
+   5       5      Pool (0x10b)             1.397    0.7%    98.3%  [    391,100 ]   ai_node_5 
+   6       8      Transpose (0x10a)        0.234    0.1%    98.4%  [     65,510 ]   ai_node_6 
+   7       14     Gather (0x11c)           0.112    0.1%    98.4%  [     31,310 ]   ai_node_7 
+   8       29     Transpose (0x10a)        0.113    0.1%    98.5%  [     31,715 ]   ai_node_8 
+   9       29     Dense (0x104)            0.300    0.2%    98.7%  [     83,972 ]   ai_node_9 
+   10      29     Transpose (0x10a)        0.115    0.1%    98.7%  [     32,141 ]   ai_node_10 
+   11      30     Eltwise (0x113)          0.057    0.0%    98.8%  [     15,913 ]   ai_node_11 
+   12      31     Transpose (0x10a)        0.114    0.1%    98.8%  [     31,861 ]   ai_node_12 
+   13      31     Dense (0x104)            0.299    0.2%    99.0%  [     83,768 ]   ai_node_13 
+   14      31     Transpose (0x10a)        0.117    0.1%    99.0%  [     32,642 ]   ai_node_14 
+   15      32     Eltwise (0x113)          0.056    0.0%    99.1%  [     15,749 ]   ai_node_15 
+   16      37     Transpose (0x10a)        0.113    0.1%    99.1%  [     31,630 ]   ai_node_16 
+   17      12     Gather (0x11c)           0.113    0.1%    99.2%  [     31,599 ]   ai_node_17 
+   18      17     Transpose (0x10a)        0.113    0.1%    99.2%  [     31,727 ]   ai_node_18 
+   19      17     Dense (0x104)            0.300    0.2%    99.4%  [     84,112 ]   ai_node_19 
+   20      17     Transpose (0x10a)        0.115    0.1%    99.4%  [     32,145 ]   ai_node_20 
+   21      18     Eltwise (0x113)          0.056    0.0%    99.5%  [     15,753 ]   ai_node_21 
+   22      19     Transpose (0x10a)        0.114    0.1%    99.5%  [     31,885 ]   ai_node_22 
+   23      19     Dense (0x104)            0.300    0.2%    99.7%  [     83,939 ]   ai_node_23 
+   24      19     Transpose (0x10a)        0.117    0.1%    99.8%  [     32,640 ]   ai_node_24 
+   25      20     Eltwise (0x113)          0.056    0.0%    99.8%  [     15,763 ]   ai_node_25 
+   26      25     Transpose (0x10a)        0.113    0.1%    99.8%  [     31,635 ]   ai_node_26 
+   27      10     Gather (0x11c)           0.013    0.0%    99.8%  [      3,539 ]   ai_node_27 
+   28      27     Dense (0x104)            0.025    0.0%    99.9%  [      6,906 ]   ai_node_28 
+   29      28     Eltwise (0x113)          0.004    0.0%    99.9%  [      1,190 ]   ai_node_29 
+   30      34     Transpose (0x10a)        0.008    0.0%    99.9%  [      2,337 ]   ai_node_30 
+   31      34     324 (0x144)              0.015    0.0%    99.9%  [      4,244 ]   ai_node_31 
+   32      34     Transpose (0x10a)        0.008    0.0%    99.9%  [      2,310 ]   ai_node_32 
+   33      35     BN (0x102)               0.003    0.0%    99.9%  [        783 ]   ai_node_33 
+   34      36     Softmax (0x10c)          0.009    0.0%    99.9%  [      2,482 ]   ai_node_34 
+   35      37     Transpose (0x10a)        0.005    0.0%    99.9%  [      1,525 ]   ai_node_35 
+   36      37     324 (0x144)              0.016    0.0%    99.9%  [      4,607 ]   ai_node_36 
+   37      37     Transpose (0x10a)        0.015    0.0%    99.9%  [      4,212 ]   ai_node_37 
+   38      15     Dense (0x104)            0.025    0.0%    99.9%  [      7,052 ]   ai_node_38 
+   39      16     Eltwise (0x113)          0.004    0.0%    99.9%  [      1,199 ]   ai_node_39 
+   40      22     Transpose (0x10a)        0.008    0.0%    99.9%  [      2,322 ]   ai_node_40 
+   41      22     324 (0x144)              0.015    0.0%    99.9%  [      4,194 ]   ai_node_41 
+   42      22     Transpose (0x10a)        0.008    0.0%    99.9%  [      2,317 ]   ai_node_42 
+   43      23     BN (0x102)               0.003    0.0%    99.9%  [        772 ]   ai_node_43 
+   44      24     Softmax (0x10c)          0.009    0.0%    99.9%  [      2,408 ]   ai_node_44 
+   45      25     Transpose (0x10a)        0.005    0.0%    99.9%  [      1,507 ]   ai_node_45 
+   46      25     324 (0x144)              0.016    0.0%   100.0%  [      4,554 ]   ai_node_46 
+   47      25     Transpose (0x10a)        0.015    0.0%   100.0%  [      4,214 ]   ai_node_47 
+   48      40     Concat (0x110)           0.004    0.0%   100.0%  [      1,116 ]   ai_node_48 
+   49      41     Dense (0x104)            0.066    0.0%   100.0%  [     18,591 ]   ai_node_49 
+   50      42     NL (0x107)               0.002    0.0%   100.0%  [        470 ]   ai_node_50 
+   51      43     Dense (0x104)            0.003    0.0%   100.0%  [        939 ]   ai_node_51 
+   ---------------------------------------------------------------------------------------------- 
+   n/a     n/a    Inter-nodal              0.000    0.0%   100.0%                   n/a 
+   ---------------------------------------------------------------------------------------------- 
+   total                                 192.711                   [ 53,959,023 ] 
+   ---------------------------------------------------------------------------------------------- 
+   Statistic per tensor 
+   ------------------------------------------------------------------------------------- 
+   tensor   #    type[shape]:size             min     max     mean      std  name 
+   ------------------------------------------------------------------------------------- 
+   I.0      10   f32[1,2,33,150]:39600      0.000   1.000    0.499    0.288  input_1 
+   O.0      10   f32[1,1,1,2]:8            -0.038   0.254    0.087    0.061  output_1 
+   ------------------------------------------------------------------------------------- 
+Saving validation data... 
+ output directory: C:\Users\40563\.stm32cubemx\network_output 
+ creating C:\Users\40563\.stm32cubemx\network_output\network_val_io.npz 
+ m_outputs_1: (10, 2)/float64, min/max=[-0.037638, 0.254429], mean/std=[0.086696, 0.060978], output 
+ c_outputs_1: (10, 1, 1, 2)/float32, min/max=[-0.037638, 0.254428], mean/std=[0.086696, 0.060978], output 
+Computing the metrics... 
+ Cross accuracy report #1 (reference vs C-model) 
+ ---------------------------------------------------------------------------------------------------- 
+ notes: - data type is different: r/float64 instead p/float32 
+        - ACC metric is not computed ("--classifier" option can be used to force it) 
+        - the output of the reference model is used as ground truth/reference value 
+        - 10 samples (2 items per sample) 
+  acc=n.a. rmse=0.000000561 mae=0.000000462 l2r=0.000005293 mean=-0.000000 std=0.000001 nse=1.000000 cos=1.000000 
+ Evaluation report (summary) 
+ ------------------------------------------------------------------------------------------------------------------------------------------------ 
+ Output       acc    rmse          mae           l2r           mean        std        nse        cos        tensor 
+ ------------------------------------------------------------------------------------------------------------------------------------------------ 
+ X-cross #1   n.a.   0.000000561   0.000000462   0.000005293   -0.000000   0.000001   1.000000   1.000000   'output', 10 x f32(1x2), m_id=[43] 
+ ------------------------------------------------------------------------------------------------------------------------------------------------ 
+  acc  : Accuracy (class, axis=-1) 
+  rmse : Root Mean Squared Error 
+  mae  : Mean Absolute Error 
+  l2r  : L2 relative error 
+  mean : Mean error 
+  std  : Standard deviation error 
+  nse  : Nash-Sutcliffe efficiency criteria, bigger is better, best=1, range=(-inf, 1] 
+  cos  : COsine Similarity, bigger is better, best=1, range=(0, 1] 
+Creating txt report file C:\Users\40563\.stm32cubemx\network_output\network_validate_report.txt 
+elapsed time (validate): 67.821s 
+Validation ended
